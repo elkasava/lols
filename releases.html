@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELEASES | TRADITIONAL RECORDS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html"><img src="logo.png" alt="Logo"></a></div>
+        <div class="nav-pill-center">
+            <ul class="nav-links">
+                <li><a href="artiesten.html">ARTIESTEN</a></li>
+                <li><a href="releases.html" class="active">RELEASES</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="merch.html">MERCH</a></li>
+            </ul>
+        </div>
+        <div class="nav-actions">
+            <a href="#" id="openCartBtn" class="icon-link cart-link">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span id="cartCountBadge" class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="page-container" style="padding-top: 120px;">
+        <h1 class="section-title">FULL CATALOG</h1>
+        <div class="bento-grid" id="releasesGrid">
+            </div>
+    </main>
+
+    <div id="productModal" class="modal-overlay"><div class="modal-content"><span class="close-modal">&times;</span><div class="modal-grid"><div class="modal-image-col"><img src="" id="modalImg"></div><div class="modal-info-col"><h2 id="modalArtist"></h2><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="price-control-row"><span id="modalPrice"></span><input type="number" id="modalQty" value="1" min="1"></div><button id="addToCartBtn" class="add-cart-btn">ADD TO CART</button></div></div></div></div>
+    <div id="cartModal" class="modal-overlay"><div class="modal-content cart-content"><h2 class="cart-title">CART</h2><div id="cartItemsContainer"></div><div class="cart-footer"><span id="cartTotalPrice"></span><button class="continue-btn" id="continueShopping">BACK</button></div></div></div>
+</body>
+</html>
