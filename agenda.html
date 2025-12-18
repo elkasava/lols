@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA | Traditional Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" aria-label="Home"><img src="logo.png" alt="Logo"></a>
+        </div>
+        
+        <div class="nav-pill-container">
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="artiesten.html">ARTIESTEN</a></li>
+                <li><a href="releases.html">RELEASES</a></li>
+                <li><a href="agenda.html" class="active">AGENDA</a></li> 
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="merch.html">MERCH</a></li>
+                <li><a href="sync.html">SYNC</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="#" id="toggleSearchBtn" class="icon-link"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+                <a href="#" id="openCartBtn" class="icon-link cart-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span id="cartCountBadge" class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="search-bar-container" id="searchContainer">
+            <input type="text" id="searchInput" placeholder="ZOEK...">
+            <button id="closeSearch" class="close-search">&times;</button>
+        </div>
+    </nav>
+
+    <div class="page-container" style="padding-top: 150px;">
+        <h1 class="page-title">UPCOMING EVENTS</h1>
+        
+        <div class="agenda-list" id="agendaList"></div>
+    </div>
+    
+    <div id="cartModal" class="modal-overlay"><div class="modal-content cart-content"><div class="cart-title">WINKELWAGEN <span class="close-modal close-cart">&times;</span></div><div class="cart-items-container" id="cartItemsContainer"></div><div class="cart-footer"><div class="cart-total-row"><span>TOTAAL</span><span id="cartTotalPrice">€0.00</span></div><button class="action-btn checkout-btn">AFREKENEN</button><button class="continue-btn" id="continueShopping">VERDER WINKELEN</button></div></div></div>
+
+</body>
+</html>

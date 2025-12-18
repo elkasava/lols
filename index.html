@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Traditional Records - High Fidelity Surinaamse Muziek.">
+    <title>TRADITIONAL RECORDS | EST. 2025</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" aria-label="Home" class="hover-target"><img src="logo.png" alt="Traditional Records Logo"></a>
+        </div>
+        
+        <button class="hamburger hover-target" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+
+        <div class="nav-pill-center" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="artiesten.html" class="hover-target">ARTIESTEN</a></li>
+                <li><a href="releases.html" class="hover-target">RELEASES</a></li>
+                <li><a href="shop.html" class="hover-target">SHOP</a></li>
+                <li><a href="merch.html" class="hover-target">MERCH</a></li>
+                <li><a href="sync.html" class="hover-target">SYNC & LICENSING</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-actions">
+            <a href="#" id="toggleSearchBtn" class="icon-link hover-target"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
+            <a href="#" id="openCartBtn" class="icon-link cart-link hover-target">
+                <svg class="nav-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span id="cartCountBadge" class="cart-count">0</span>
+            </a>
+        </div>
+
+        <div class="search-bar-container" id="searchContainer">
+            <input type="text" id="searchInput" placeholder="ZOEK ARTIEST OF TITEL...">
+            <button id="closeSearch" class="close-search hover-target">&times;</button>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="slide" style="background-image: url('first.jpg');"></div>
+        <div class="slide" style="background-image: url('second.jpg');"></div>
+        <div class="slide" style="background-image: url('thirth.jpg');"></div>
+        <div class="slide" style="background-image: url('forth.jpg');"></div>
+        <div class="slide" style="background-image: url('fifth.jpg');"></div>
+        
+        <div class="hero-content" id="heroText">
+            <h1 class="hero-title"><span class="sonic-italic">Sonic</span><br>HERITAGE</h1>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="new-releases reveal" id="releases">
+            
+            <h2 class="section-title">NIEUWSTE RELEASES</h2>
+            
+            <div class="releases-wrapper">
+                
+                <div class="decor-vinyl">
+                    <div class="vinyl-spin-group">
+                        <div class="vinyl-disc-css">
+                            <div class="vinyl-shine-base"></div>
+                            <div class="vinyl-shine-top"></div>
+                        </div>
+                        <div class="vinyl-label"><img src="logo.png" alt="TR"></div>
+                    </div>
+                </div>
+
+                <div class="bento-grid" id="releasesGrid">
+                    <div class="loader">CATALOGUS LADEN...</div>
+                </div>
+
+            </div>
+            
+            <div class="view-all-container">
+                <a href="releases.html" class="view-all-link hover-target">BEKIJK VOLLEDIGE CATALOGUS</a>
+            </div>
+        </section>
+
+        <a href="shop.html" class="ticker-bar-divider hover-target">
+            <div class="ticker">
+                <div class="ticker-item">KASEKO • KAWINA • WINTI • BANJA • AWASA • ALEKE • SOUL • SOKO • PSALM • GOSPEL/BAZIJN • SURI SOUL • REGGAE • DANCEHALL - WORLDWIDE SHIPPING • KENNY B • THEO BIJLHOUT • DAMARU • KATER KARMA • THE GENERALS • NAKS KASEKO LOKO • STIMOFO • TRANGA RUGIE • BRYAN B • PAPA TOUWTJIE • DANCEHALL CREW • KING KOYEBA • SABAKOE • APTIJT •</div>
+                <div class="ticker-item">KASEKO • KAWINA • WINTI • BANJA • AWASA • ALEKE • SOUL • SOKO • PSALM • GOSPEL/BAZIJN • SURI SOUL • REGGAE • DANCEHALL - WORLDWIDE SHIPPING • KENNY B • THEO BIJLHOUT • DAMARU • KATER KARMA • THE GENERALS • NAKS KASEKO LOKO • STIMOFO • TRANGA RUGIE • BRYAN B • PAPA TOUWTJIE • DANCEHALL CREW • KING KOYEBA • SABAKOE • APTIJT •</div>
+            </div>
+        </a>
+
+        <section class="merch-section reveal" id="merch">
+            <h2 class="section-title">LIMITED MERCH</h2>
+            <div class="merch-carousel-wrapper">
+                <button class="carousel-arrow prev hover-target" id="merchPrevBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                <div class="merch-track" id="merchTrack"></div>
+                <button class="carousel-arrow next hover-target" id="merchNextBtn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+            </div>
+        </section>
+
+        <section class="agenda-section reveal" id="agenda">
+            <h2 class="section-title">TOUR DATES</h2>
+            <div class="agenda-list-classic" id="agendaList"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer reveal"><div class="footer-content"><div class="footer-col brand-col"><img src="logo.png" alt="Traditional Records" class="footer-logo"><address>TRADITIONAL RECORDS HQ<br>Waterkant 12, Paramaribo<br><a href="mailto:info@traditionalrecords.sr" class="hover-target">info@traditionalrecords.sr</a></address><div class="social-icons"><a href="#" class="hover-target"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a><a href="#" class="hover-target"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 11.5c5-2 8.5-1 9.5-.5"></path><path d="M7.5 14.5c5-2 8.5-1 9.5-.5"></path><path d="M7 17.5c5-2 8.5-1 9.5-.5"></path></svg></a><a href="#" class="hover-target"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div></div><div class="footer-col newsletter-col"><h3>THE NEWSLETTER</h3><p>Join the inner circle.</p><form class="newsletter-form"><input type="email" placeholder="EMAIL ADDRESS" required><button type="submit" class="hover-target">SUBSCRIBE <svg width="14" height="10" viewBox="0 0 18 12" fill="none" stroke="currentColor"><path d="M12.5 1.5L17 6M17 6L12.5 10.5M17 6H1"/></svg></button></form></div><div class="footer-col links-col"><h3>EXPLORE</h3><ul class="footer-links"><li><a href="artiesten.html" class="hover-target">Artists</a></li><li><a href="shop.html" class="hover-target">Shop</a></li><li><a href="sync.html" class="hover-target">Sync & Licensing</a></li><li><a href="#" class="hover-target">Contact</a></li></ul><div class="copyright-text">TRADITIONAL RECORDS 2026 &copy;</div></div></div></footer>
+    <div id="productModal" class="modal-overlay"><div class="modal-content"><span class="close-modal close-product hover-target">&times;</span><div class="modal-grid"><div class="modal-image-col"><img src="" id="modalImg"></div><div class="modal-info-col"><h2 id="modalArtist"></h2><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="price-control-row"><span class="modal-price" id="modalPrice"></span><div class="quantity-wrapper"><button class="qty-btn hover-target" data-action="decrease">-</button><input type="number" id="modalQty" value="1" min="1" readonly><button class="qty-btn hover-target" data-action="increase">+</button></div></div><button id="addToCartBtn" class="add-cart-btn hover-target">TOEVOEGEN AAN WINKELWAGEN</button></div></div></div></div>
+    <div id="cartModal" class="modal-overlay"><div class="modal-content cart-content"><div class="cart-title">WINKELWAGEN <span class="close-modal close-cart hover-target">&times;</span></div><div id="cartItemsContainer" class="cart-items-container"></div><div class="cart-footer"><div class="cart-total-row"><span>TOTAAL</span><span id="cartTotalPrice">€0.00</span></div><button class="action-btn checkout-btn hover-target">AFREKENEN</button><button class="continue-btn hover-target" id="continueShopping">VERDER WINKELEN</button></div></div></div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP | Traditional Records</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Traditional Records Logo"></a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="artiesten.html">ARTIESTEN</a></li>
+            <li><a href="releases.html">RELEASES</a></li>
+            
+            <li><a href="shop.html" class="active">SHOP</a></li>
+            
+            <li><a href="merch.html">MERCH</a></li>
+            <li><a href="sync.html">SYNC</a></li>
+
+            <li class="icon-item">
+                <a href="#" class="icon-link" aria-label="Zoeken">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </a>
+            </li>
+            <li class="icon-item">
+                <a href="#" id="openCartBtn" class="icon-link cart-link" aria-label="Winkelwagen">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span id="cartCountBadge" class="cart-count">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        
+        <h1 class="page-title">OFFICIAL SHOP</h1>
+
+        <div class="grid-layout">
+            
+            <article class="grid-item release-item" 
+                 data-artist="PAWANA" 
+                 data-title="VINYL - LP" 
+                 data-price="25.00" 
+                 data-desc="Exclusieve vinyl persing van Pawana. Limited edition.">
+                <div class="grid-img-wrapper">
+                    <img src="cd1.jpg" class="grid-img" alt="Product">
+                </div>
+                <h3 class="artist-name">PAWANA</h3>
+                <p class="track-title">VINYL - LP</p>
+                <p class="modal-price">€25.00</p>
+            </article>
+
+            <article class="grid-item release-item" 
+                 data-artist="FAJA WOWIA" 
+                 data-title="CD ALBUM" 
+                 data-price="22.50" 
+                 data-desc="Het volledige album op CD in jewel case.">
+                <div class="grid-img-wrapper">
+                    <img src="cd2.jpg" class="grid-img" alt="Product">
+                </div>
+                <h3 class="artist-name">FAJA WOWIA</h3>
+                <p class="track-title">CD ALBUM</p>
+                <p class="modal-price">€22.50</p>
+            </article>
+
+            <article class="grid-item release-item" 
+                 data-artist="TRADITIONAL RECORDS" 
+                 data-title="T-SHIRT BLACK" 
+                 data-price="30.00" 
+                 data-desc="Officieel merchandise T-shirt. 100% Katoen.">
+                <div class="grid-img-wrapper">
+                    <img src="cd4.jpg" class="grid-img" alt="Product">
+                </div>
+                <h3 class="artist-name">MERCHANDISE</h3>
+                <p class="track-title">T-SHIRT BLACK</p>
+                <p class="modal-price">€30.00</p>
+            </article>
+
+            </div>
+    </div>
+
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal close-product">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image-col">
+                    <img src="" id="modalImg" alt="Album Cover">
+                </div>
+                <div class="modal-info-col">
+                    <div class="info-header">
+                        <h2 id="modalArtist">ARTIEST</h2>
+                        <h3 id="modalTitle">TITEL</h3>
+                    </div>
+                    <p class="modal-desc" id="modalDesc">Omschrijving...</p>
+                    <div class="price-quantity-row">
+                        <span class="modal-price" id="modalPrice">€0.00</span>
+                        <div class="quantity-selector">
+                            <button data-action="decrease">-</button>
+                            <input type="number" id="modalQty" value="1" min="1" readonly>
+                            <button data-action="increase">+</button>
+                        </div>
+                    </div>
+                    <button id="addToCartBtn" class="action-btn">AAN WINKELWAGEN TOEVOEGEN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal-overlay">
+        <div class="modal-content cart-content">
+            <span class="close-modal close-cart">&times;</span>
+            <h2 class="cart-title">WINKELWAGEN</h2>
+            <div class="cart-items-container" id="cartItemsContainer"></div>
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span>TOTAAL</span>
+                    <span id="cartTotalPrice">€0.00</span>
+                </div>
+                <button class="action-btn checkout-btn">AFREKENEN</button>
+                <button class="continue-btn" id="continueShopping">VERDER WINKELEN</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
